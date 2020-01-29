@@ -20,7 +20,13 @@ class Champions extends Component {
 			let championImg = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`;
 			return (
 				<span key={champion} className="championImg">
-					<img src={championImg} alt={champion} />
+					<Link to={`/${champion}`}>
+						<img
+							src={championImg}
+							onClick={() => this.props.setChampion(champion)}
+							alt={champion}
+						/>
+					</Link>
 					<p>{champion}</p>
 				</span>
 			);
