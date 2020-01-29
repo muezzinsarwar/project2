@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Champions.css';
 
 const url =
 	'https://ddragon.leagueoflegends.com/cdn/10.2.1/data/en_US/champion.json';
@@ -18,15 +19,15 @@ class Champions extends Component {
 		let championArray = championList.map((champion, index) => {
 			let championImg = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`;
 			return (
-				<div key={champion}>
+				<span key={champion} className="championImg">
 					<img src={championImg} alt={champion} />
-				</div>
+					<p>{champion}</p>
+				</span>
 			);
 		});
 		return (
 			<div>
-				<h2>Champions</h2>
-				<ul>{championArray}</ul>
+				<span>{championArray}</span>
 			</div>
 		);
 	}
