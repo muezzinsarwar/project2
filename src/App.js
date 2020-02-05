@@ -18,7 +18,6 @@ class App extends Component {
 	// };
 	champList = list => {
 		this.setState({ champList: list });
-		console.log('function', this.state.champList);
 	};
 	render() {
 		return (

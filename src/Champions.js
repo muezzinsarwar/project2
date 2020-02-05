@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Champions.css';
+
+let champDisplay;
 
 class Champions extends Component {
 	componentDidMount() {
@@ -15,8 +17,25 @@ class Champions extends Component {
 	}
 
 	render() {
-		console.log(this.props.champs);
-		return <div>{this.props.champs}</div>;
+		let champs = this.props.champs;
+		if (champs !== null) {
+			champDisplay = champs.map(champion => {
+				let championImg = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`;
+				return (
+					<span key={champion} className="championImg">
+						<Link to={`/${champion}`}>
+							<img
+								src={championImg}
+								onClick={() => this.props.setChampion(champion)}
+								alt={champion}
+							/>
+						</Link>
+						<p>{champion}</p>
+					</span>
+				);
+			});
+		}
+		return <div>{champDisplay}</div>;
 	}
 }
 export default Champions;
