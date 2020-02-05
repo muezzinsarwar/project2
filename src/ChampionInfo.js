@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// import ChampionItems from './ChampionItems';
+import ChampionItems from './ChampionItems';
+
+let championInfo;
 
 class ChampionInfo extends Component {
 	componentDidMount() {
@@ -9,15 +11,18 @@ class ChampionInfo extends Component {
 			fetch(url)
 				.then(response => response.json())
 				.then(response => {
-					let championInfo = Object.entries(response.data);
-					console.log(response.data);
+					championInfo = Object.entries(response.data);
 					console.log(championInfo);
 				});
 		}
 	}
 
 	render() {
-		return <div>Name:</div>;
+		return (
+			<div>
+				<ChampionItems champ={this.championInfo} />
+			</div>
+		);
 	}
 }
 
