@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class ChampionItems extends Component {
-	render() {
-		return <div></div>;
-	}
-}
+// class ChampionItems extends Component {
+// 	render() {
+// 		return <div></div>;
+// 	}
+// }
 
-export default ChampionItems;
+// export default ChampionItems;
