@@ -18,7 +18,7 @@ class App extends Component {
 	// };
 	champList = list => {
 		this.setState({ champList: list });
-		console.log(this.state.champList);
+		console.log('function', this.state.champList);
 	};
 	render() {
 		return (
@@ -34,7 +34,12 @@ class App extends Component {
 						<Route
 							exact
 							path="/"
-							render={() => <Champions champList={this.champList} />}
+							render={() => (
+								<Champions
+									champList={this.champList}
+									champs={this.state.champList}
+								/>
+							)}
 						/>
 						{/* <Route
 							path="/:champion"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Champions.css';
 
 class Champions extends Component {
@@ -15,22 +15,8 @@ class Champions extends Component {
 	}
 
 	render() {
-		// let championArray = championList.map((champion, index) => {
-		// 	let championImg = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`;
-		// 	return (
-		// 		<span key={champion} className="championImg">
-		// 			<Link to={`/${champion}`}>
-		// 				<img
-		// 					src={championImg}
-		// 					onClick={() => this.props.setChampion(champion)}
-		// 					alt={champion}
-		// 				/>
-		// 			</Link>
-		// 			<p>{champion}</p>
-		// 		</span>
-		// 	);
-		// });
-		return <div>{/* <span>{championArray}</span> */}</div>;
+		console.log(this.props.champs);
+		return <div>{this.props.champs}</div>;
 	}
 }
 export default Champions;
