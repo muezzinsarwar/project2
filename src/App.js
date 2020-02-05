@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Champions from './Champions';
 import { Link, Switch, Route } from 'react-router-dom';
-// import ChampionInfo from './ChampionInfo';
+import ChampionInfo from './ChampionInfo';
 import Header from './Header';
 
 class App extends Component {
@@ -13,9 +13,9 @@ class App extends Component {
 			champList: null
 		};
 	}
-	// setChampion = champ => {
-	// 	this.setState({ champion: champ });
-	// };
+	setChampion = champ => {
+		this.setState({ champ: champ });
+	};
 	champList = list => {
 		this.setState({ champList: list });
 	};
@@ -37,13 +37,14 @@ class App extends Component {
 								<Champions
 									champList={this.champList}
 									champs={this.state.champList}
+									setChampion={this.setChampion}
 								/>
 							)}
 						/>
-						{/* <Route
-							path="/:champion"
-							render={() => <ChampionInfo champion={this.state.champion} />}
-						/> */}
+						<Route
+							path="/champion/:champion"
+							render={() => <ChampionInfo champion={this.state.champ} />}
+						/>
 					</Switch>
 				</main>
 			</div>
