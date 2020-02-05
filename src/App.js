@@ -16,6 +16,7 @@ class App extends Component {
 		this.setState({ champion: champ });
 	};
 	render() {
+		setTimeout(() => {}, 2000);
 		return (
 			<div>
 				<nav>
