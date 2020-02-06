@@ -4,6 +4,12 @@ import ChampionItems from './ChampionItems';
 let championInfo;
 
 class ChampionInfo extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			championInfo: null
+		};
+	}
 	componentDidMount() {
 		if (this.props.champion !== null) {
 			let champion = this.props.champion;
@@ -13,14 +19,14 @@ class ChampionInfo extends Component {
 				.then(response => {
 					championInfo = Object.entries(response.data);
 					console.log(championInfo);
+					this.setState({ championInfo: championInfo });
 				});
 		}
 	}
-
 	render() {
 		return (
 			<div>
-				<ChampionItems champ={this.championInfo} />
+				<ChampionItems champ={this.state.championInfo} />
 			</div>
 		);
 	}
