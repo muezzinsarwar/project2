@@ -16,7 +16,7 @@ The search bar allows you to filter through the long list of champions that Leag
 On the champion info page you will find the lore, passive, and abilities of the champion you clicked on in the home page. 
 
 ## Used Technologies
-This application was created with the language Javascript, and the React and React Router libraries were used as well to build this application.
+This application was created with the language Javascript, and the React and React Router libraries were used as well to build this application. I also used the League of Legends API to get the data for my application.
 
 ## Using the Application
 In order to use this application you can simply click the website link attached to this repo and use it as instructed above. If you wish to install this repo then follow these instructions:
