@@ -30,14 +30,14 @@ class Champions extends Component {
 								alt={champion}
 							/>
 						</Link>
-						<p>{champion}</p>
+						<p className="name">{champion}</p>
 					</section>
 				);
 			});
 		}
 		return (
 			<div>
-				<section>
+				<section className="search">
 					<form onSubmit={this.props.handleSubmit}>
 						<input
 							type="text"
@@ -45,7 +45,7 @@ class Champions extends Component {
 							value={this.props.searchStr}
 							onChange={this.props.handleChange}
 						/>
-						<button type="sumbit">search</button>
+						<button type="sumbit">Search</button>
 					</form>
 				</section>
 				<section className="container">{champDisplay}</section>

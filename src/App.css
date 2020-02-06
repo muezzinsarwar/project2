@@ -9,19 +9,59 @@
 a {
 	color: inherit;
 }
-.title {
-	background: #1a1919;
+.title,
+.mainLink,
+input,
+button,
+.name {
 	font-family: 'Cinzel', serif;
+}
+input,
+button,
+.name {
+	font-weight: bold;
+}
+.title {
+	background: #070707;
 	font-size: 50px;
 	color: #dfb240;
+	padding-top: 14px;
+	padding-bottom: 8px;
+}
+
+.mainLink {
+	color: #aa872f;
+	background: #1a1919;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 25px;
+	font-size: 25px;
+}
+.mainLink:hover {
+	background: #2e2c2c;
 }
 body {
 	background: #8b8585;
 	text-align: center;
 }
+
+input {
+	font-size: 14px;
+	border: 2px #505050 solid;
+	text-align: justify;
+	padding-left: 5px;
+}
+button {
+	font-size: 14px;
+	border: 1px solid;
+	color: #000000;
+	background-color: #ffffff;
+}
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
+	margin: 10px 20px;
 }
 .championImg {
 	width: 150px;
@@ -48,9 +88,3 @@ body {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
-
-/* span {
-	font-size: 27px;
-	color: #a87f17;
-	text-decoration: underline;
-} */
