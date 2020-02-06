@@ -18,7 +18,6 @@ class ChampionInfo extends Component {
 				.then(response => response.json())
 				.then(response => {
 					championInfo = Object.entries(response.data);
-					console.log(championInfo);
 					this.setState({ championInfo: championInfo });
 				});
 		}
