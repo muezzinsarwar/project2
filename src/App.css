@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 * {
 	margin: 0;
 	padding: 0;
@@ -69,6 +70,27 @@ button {
 }
 .championImg:hover {
 	filter: brightness(70%);
+}
+.fullImage {
+	width: 600px;
+	height: auto;
+}
+.cName,
+.cTitle,
+h4 {
+	font-family: 'Noto Serif', serif;
+}
+h4 {
+	margin-top: 20px;
+	font-size: 30px;
+}
+.spells {
+	display: grid;
+	align-content: center;
+}
+.spell,
+.passive {
+	margin: 30px 0;
 }
 @media (max-width: 1250px) {
 	.container {
