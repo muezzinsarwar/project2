@@ -26,4 +26,5 @@ In order to use this application you can simply click the website link attached 
 4. Type in 'git clone' and paste the link you copied from your repository and then click enter.
 5. Switch into the newly added directory and type 'npm run start' and the application will run in a new browser window.
 
-
+## Contribution Guidelines
+There are many different feature that can be added and many bugs that can be caught, so if you manage to create or catch something within this application, simply make an Issue through github and it will surely be looked at and analyzed before updating to the live application. If you have any recommendations or comments about the application then you can also make an Issue on github for that. Thank you for your contribution and support!
