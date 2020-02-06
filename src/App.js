@@ -42,7 +42,7 @@ class App extends Component {
 				<nav>
 					<Header />
 					<Link to="/">
-						<h2>Champions in LoL</h2>
+						<span>Champions in LoL</span>
 					</Link>
 				</nav>
 				<main>

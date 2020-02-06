@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Champions.css';
 
 let champDisplay;
 
@@ -22,16 +21,17 @@ class Champions extends Component {
 			champDisplay = champs.map(champion => {
 				let championImg = `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`;
 				return (
-					<span key={champion} className="championImg">
+					<section key={champion} className="champion">
 						<Link to={`/champion/${champion}`}>
 							<img
+								className="championImg"
 								src={championImg}
 								onClick={() => this.props.setChampion(champion)}
 								alt={champion}
 							/>
 						</Link>
 						<p>{champion}</p>
-					</span>
+					</section>
 				);
 			});
 		}
@@ -42,14 +42,13 @@ class Champions extends Component {
 						<input
 							type="text"
 							id="searchStr"
-							placeholder="Search A Champion"
 							value={this.props.searchStr}
 							onChange={this.props.handleChange}
 						/>
 						<button type="sumbit">search</button>
 					</form>
 				</section>
-				<div>{champDisplay}</div>
+				<section className="container">{champDisplay}</section>
 			</div>
 		);
 	}
