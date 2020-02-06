@@ -1,7 +1,7 @@
 # League Of Champions
 
 ## What is League of Champions?
-League of Champions is an application meant to be used by people that want to find information on a specific champion that they want to play or understand. This application helps people that are seeking to learn a specific champions abilities to either understand them and play better yourself or to understand the type of champions you will have to play against. 
+League of Champions is an application meant to be used by people that want to find information on a specific champion that they want to play or understand. This application helps people that are seeking to learn a specific champions abilities to either understand them and play better yourself or to understand the type of champions you will have to play against. I wanted to create this application, not only because of the passion that I have for League of Legends but also for the hope that it may help others enjoy more time on summoners rift!
 
 ### Home Page
 <img width="1440" alt="Screen Shot 2020-02-06 at 7 43 14 AM" src="https://user-images.githubusercontent.com/23662492/73942586-eb775180-48b4-11ea-9986-fae5fe949266.png">
