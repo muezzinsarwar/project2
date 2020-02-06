@@ -10,7 +10,9 @@ class App extends Component {
 		super(props);
 		this.state = {
 			champ: null,
-			champList: null
+			champList: null,
+			champListOriginal: null,
+			searchStr: ''
 		};
 	}
 	setChampion = champ => {
@@ -18,6 +20,21 @@ class App extends Component {
 	};
 	champList = list => {
 		this.setState({ champList: list });
+		this.setState({ champListOriginal: list });
+	};
+	handleSubmit = e => {
+		e.preventDefault();
+		if (this.state.champList !== null) {
+			const filteredChamp = this.state.champListOriginal.filter(champ =>
+				champ.toLowerCase().includes(this.state.searchStr.toLowerCase())
+			);
+			this.setState({ champList: filteredChamp });
+			this.setState({ searchStr: '' });
+		}
+	};
+	handleChange = event => {
+		this.setState({ searchStr: event.target.value });
+		console.log(this.state.searchStr);
 	};
 	render() {
 		return (
@@ -38,6 +55,9 @@ class App extends Component {
 									champList={this.champList}
 									champs={this.state.champList}
 									setChampion={this.setChampion}
+									handleSubmit={this.handleSubmit}
+									searchStr={this.state.searchStr}
+									handleChange={this.handleChange}
 								/>
 							)}
 						/>

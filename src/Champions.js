@@ -35,7 +35,23 @@ class Champions extends Component {
 				);
 			});
 		}
-		return <div>{champDisplay}</div>;
+		return (
+			<div>
+				<section>
+					<form onSubmit={this.props.handleSubmit}>
+						<input
+							type="text"
+							id="searchStr"
+							placeholder="Search A Champion"
+							value={this.props.searchStr}
+							onChange={this.props.handleChange}
+						/>
+						<button type="sumbit">search</button>
+					</form>
+				</section>
+				<div>{champDisplay}</div>
+			</div>
+		);
 	}
 }
 export default Champions;
